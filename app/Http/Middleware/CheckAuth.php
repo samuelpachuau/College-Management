@@ -15,11 +15,6 @@ class CheckAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-
-        if(!auth()->check()){
-            return redirect()->route('login');
-        }
-
-        return $next($request);
+           return $next($request);
     }
 }
